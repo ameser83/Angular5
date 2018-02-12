@@ -3,23 +3,21 @@ import { Http, BaseRequestOptions } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
 import { SharedModule } from '@app/shared';
-import { HomeComponent } from './home.component';
-import { QuoteService } from '../shared/services/quote/quote.service';
-import { CustomerService, Customer } from '../shared/services/customer/customer.service';
+import { UserComponent } from './user.component';
+import { UserService } from '../shared/services/user/user.service';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('UserComponent', () => {
+  let component: UserComponent;
+  let fixture: ComponentFixture<UserComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
         imports: [
           SharedModule
         ],
-        declarations: [HomeComponent],
+        declarations: [UserComponent],
         providers: [
-          QuoteService,
-          CustomerService,
+          UserService,
           MockBackend,
           BaseRequestOptions,
           {
@@ -35,7 +33,7 @@ describe('HomeComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(UserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

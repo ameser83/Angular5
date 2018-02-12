@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
@@ -14,6 +15,9 @@ import { AboutModule } from './about/about.module';
 import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { UserModule } from './user/user.module';
+
+
 
 @NgModule({
   imports: [
@@ -26,9 +30,11 @@ import { AppRoutingModule } from './app-routing.module';
     CoreModule,
     SharedModule,
     HomeModule,
+    UserModule,
     AboutModule,
     LoginModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   declarations: [AppComponent],
   providers: [

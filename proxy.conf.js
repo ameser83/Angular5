@@ -15,6 +15,14 @@ const proxyConfig = [
     target: 'https://api.chucknorris.io',
     changeOrigin: true,
     secure: false
+  },
+  //you can configure multiple end point services
+  {
+    context: '/gte',
+    pathRewrite: { '^/gte': '' },
+    target: 'https://gatewalls.azurewebsites.net',
+    changeOrigin: true,
+    secure: false
   }
 ];
 
